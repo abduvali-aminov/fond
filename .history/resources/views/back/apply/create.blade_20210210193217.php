@@ -1,0 +1,12 @@
+@extends('voyager::master')
+@section('content')
+
+    <div class="container">
+        <form >
+            <div class="form-group">
+                <input type="text" place>
+            </div>
+        </form>
+    </div>
+
+@endsection

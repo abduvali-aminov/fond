@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Repository;
+
+use App\Models\Apply;
+
+class AppliesRepository implements \App\Interface\RepositoryInterface
+{
+    /**
+     * @inheritdoc
+     */
+    public function getAll()
+    {
+        $items = Apply::all();
+
+        return $items;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param [type] $attribute
+     * @param [type] $value
+     * @param string $type
+     * @return void
+     */
+    public function findByAttribute($attribute, $value, $type = '=')
+    {
+        $item = Apply::where($attribute, $type, $value)->get();
+
+        return $item;
+    }
+}

@@ -1,0 +1,3 @@
+@extends('voyager::master')
+
+bsec
